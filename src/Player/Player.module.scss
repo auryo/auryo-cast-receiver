@@ -1,0 +1,104 @@
+@import "../vars.scss";
+.Player {}
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vw;
+}
+
+.logo {
+  width: 5vw;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  &:before {
+    content: '';
+    background: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.5);
+    filter: blur(20px);
+    margin: -30px;
+    display: block;
+  }
+}
+
+.foreground {
+  padding: 4vw;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: "Titillium Web";
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  .trackImage {
+    width: 18vw;
+    img {
+      max-width: 100%;
+    }
+  }
+  .trackInfo {
+    margin-top: 2rem;
+  }
+  .trackArtist {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 80%);
+    padding-bottom: .5rem;
+  }
+  .trackTitle {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+}
+
+.right {
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(200, 203, 208, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 2rem;
+  .progress {
+    background: white;
+    height: 4px;
+  }
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  color: rgba(200, 203, 208, 0.3);
+  margin-top: .4rem;
+}

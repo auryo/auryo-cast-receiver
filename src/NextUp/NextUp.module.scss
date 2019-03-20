@@ -1,0 +1,51 @@
+@import "../vars.scss";
+.nextUp {
+    font-family: "Titillium Web";
+    background: rgba(200, 203, 208, 0.3);
+    border-radius: 5px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    opacity: .7;
+    font-size: 15px;
+
+    >div{
+        flex-shrink: none;
+    }
+}
+.trackInfo{
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+.nextUpText{
+    text-align: right;
+    padding-bottom: .8rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: rgba(200, 203, 208, 0.637);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    i{
+        padding-left: .3rem;
+    }
+}
+.imgWrapper{
+    width: 50px;
+    height:50px;
+    img{
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+.trackTitle{
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+.trackArtist{
+    font-size: .8rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 90%);
+}
