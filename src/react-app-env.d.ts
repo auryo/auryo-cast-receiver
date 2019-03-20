@@ -3,3 +3,4 @@
 
 declare namespace cast {
 }
+declare module "nanoclamp";
