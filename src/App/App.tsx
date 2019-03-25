@@ -118,6 +118,7 @@ class App extends Component<AppProps, AppState> {
             <Player
               mediaInfo={this.state.mediaInfo}
               currentTime={this.state.currentTime}
+              paused={this.audio.current ? this.audio.current.paused : false}
             />
           )
         }

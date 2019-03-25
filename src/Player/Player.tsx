@@ -9,13 +9,14 @@ import NanoClamp from "nanoclamp";
 interface Props {
   mediaInfo: MediaInformation;
   currentTime: number;
+  paused: boolean;
 }
 
 interface CustomData {
   nextTrack?: NextTrackData
 }
 
-export const Player: React.FunctionComponent<Props> = ({ mediaInfo, currentTime }) => {
+export const Player: React.FunctionComponent<Props> = ({ mediaInfo, currentTime, paused }) => {
 
   if (!mediaInfo.metadata) {
     return null;
@@ -34,12 +35,14 @@ export const Player: React.FunctionComponent<Props> = ({ mediaInfo, currentTime 
       <div className={styles.background} style={{ backgroundImage: `url("${smallImage}")` }}></div>
       <div className={styles.foreground}>
         <div className={styles.header}>
+
           <div><img className={styles.logo} src={logo} /></div>
           <div>
             <NextUp nextTrack={customData ? customData.nextTrack : undefined} />
           </div>
         </div>
         <div className={styles.trackImage}>
+          <div className={`${styles.pauseIconWrapper} ${paused ? styles.visible : ''}`}><i className="icon-pause" /></div>
           <img src={largeImage} />
         </div>
         <div className={styles.right}>
